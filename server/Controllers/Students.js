@@ -8,7 +8,7 @@ export const createStudent = async (req, res) => {
     Fees: req.body.Fees,
     Contact: req.body.Contact,
   });
-  console.log(data.Name);
+  console.log(data);
   await data.save();
   res.status(200).json(data);
 };

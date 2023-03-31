@@ -9,7 +9,7 @@ dotenv.config();
 
 //middle wares
 app.use(morgan("dev"));
-app.use(cors());
+app.use(cors()); 
 app.use(express.json());
 app.use("/info", route);
 
@@ -22,8 +22,8 @@ const connect = async () => {
   } catch (err) {
     console.log(err);
   }
-};
+}; 
 app.listen(5000, () => {
   connect();
-  console.log("Server is running");
+  console.log("Server is running"); 
 });
